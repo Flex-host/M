@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy birthday Mehazabin ✨</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="images/heart.webp" type="image/png">
+
+  <style>
+    /* Intro black screen */
+    #introScreen {
+      position: fixed;
+      inset: 0;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Short Stack', cursive;
+      font-size: 3em;
+      z-index: 9999;
+      transition: opacity 2s ease;
+    }
+
+    #introScreen.fadeOut {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Black intro -->
+  <div id="introScreen">Click to enter 💖</div>
+
+  <!-- Original content (unchanged) -->
+  <div class="paper heart"></div>
+
+  <div class="paper image" style="display: flex; justify-content: center; align-items: center; flex-direction: column; transform: rotate(10deg)">
+    <p class="p1">5/ Okay okay… sorry mummy for turning <br> you into a monkey 🙈. i didn't have any other pic 😭<br>
+    Well you are getting older now 🧓<br>
+    But be the same weird, freaky,cute mummy <br>
+    Maybe one day we will make some of them together 😋😜</p>
+  </div>
+
+  <div class="paper image" style="display: flex; justify-content: center; align-items: center; flex-direction: column; transform: rotate(20deg)">
+    <img src="https://media.discordapp.net/attachments/1400910857604567133/1434882331826716824/InShot_20251103_182224989.jpg?ex=6909f1ce&is=6908a04e&hm=f1f2301acdb77ae6eb95461f45c45ef619a60bd78091f2b2ed5683913880166a&=&format=webp&width=535&height=401" alt="" style="width: 22em;">
+  </div>
+
+  <div class="paper image">
+    <p class="p1" style="font-size: 1.5em;">3/ Happy birthday dear Mehuuu 🥳 <br>
+      May Allah grant you what your heart truly desires <br> and may Allah make everything you want good for you. <br> So that he may accept all your prayers <br> and wishes and bless you with endless happiness 😊
+    </p>
+  </div>
+
+  <div class="paper image" style="display: flex; justify-content: center; align-items: center; flex-direction: column; transform: rotate(20deg);">
+    <img src="https://media.discordapp.net/attachments/1400910857604567133/1434882119045349439/52519d4c4f2da7d7df6228ea2af3b7ea.jpg?ex=6909f19c&is=6908a01c&hm=419e79c519fc10de829ab759d06d7c39d13d9cc413a7e3e0731fc032058cfbb6&=&format=webp&width=535&height=535" style="width: 15em; height: 30em;">
+  </div>
+
+  <div class="paper">
+    <p class="p1">Drag the papers to move! 
+      <br> Dear Mehazabin❤️
+    </p>
+  </div>
+
+  <audio id="birthdayMusic" src="./hpp.mp3"></audio>
+
+  <script>
+    const intro = document.getElementById("introScreen");
+    const music = document.getElementById("birthdayMusic");
+
+    document.addEventListener("click", function start() {
+      intro.classList.add("fadeOut");
+      music.play().catch(() => console.log("Autoplay blocked"));
+      document.removeEventListener("click", start);
+    });
+  </script>
+
+  <script src="mobile.js"></script>
+</body>
+</html>
